@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 42b65f277fa228f42b3d6732526c524e
+  - enabled: 1
+    path: Assets/Scenes/CategoryMenu.unity
+    guid: d84c5793c333b7246b70a9052e9d6e4f
+  - enabled: 1
     path: Assets/Scenes/Do You Know Filipino.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Results.unity
+    guid: 2b5e650ad39e6e542bc89020170321eb
   m_configObjects: {}
