@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
-{
+{    
+    [SerializeField] private float percentThreshold = 0.2f;
+    [SerializeField] private float easing = 0.5f;
 
-    private float originalPositionX;
-
+    private Vector3 panelLocation;
+    private Vector3 initialPosition;
 
     private void Awake()
     {
@@ -16,17 +18,42 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private void Start()
     {
-        originalPositionX = transform.position.x;
+        initialPosition = transform.position;
+        panelLocation = transform.position;
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(PointerEventData data)
     {
-        transform.position = new Vector3(eventData.position.x, transform.position.y, transform.position.z);
+        float difference = data.pressPosition.x - data.position.x;
+        transform.position = panelLocation - new Vector3(difference, 0, 0);
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnEndDrag(PointerEventData data)
     {
-        CheckImagePosition();
+        float percentage = (data.pressPosition.x - data.position.x) / Screen.width;
+        if (Mathf.Abs(percentage) >= percentThreshold)
+        {
+            Vector3 newLocation = panelLocation;
+            if (percentage > 0)
+                newLocation += new Vector3(-Screen.width, 0, 0);
+            else
+                newLocation += new Vector3(Screen.width, 0, 0);
+            StartCoroutine(SmoothMove(transform.position, newLocation, easing));
+            panelLocation = newLocation;
+        }
+        else
+            transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
+    }
+
+    private IEnumerator SmoothMove(Vector3 startPos, Vector3 endPos, float seconds)
+    {
+        float time = 0f;
+        while(time <= 1f)
+        {
+            time += Time.deltaTime / seconds;
+            transform.position = Vector3.Lerp(startPos, endPos, Mathf.SmoothStep(0f, 1f, time));
+            yield return null;
+        }
     }
 
     private void CheckImagePosition()
@@ -41,8 +68,5 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             //check answer and do some logic to add score or remove life
         }
-        else //reset image position if image is still within borders
-            transform.position = new Vector3(originalPositionX, transform.position.y, transform.position.z);
-
     }
 }
