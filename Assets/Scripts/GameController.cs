@@ -9,6 +9,7 @@ public class GameController : Singleton<GameController>
     private int tries = 3;
     private int score;
 
+    public UIController UIController { set { uiController = value;  } }
     public void CheckPlayerAnswer(bool playerAnswer, bool itemAnswer)
     {
         var isPlayerCorrect = playerAnswer && itemAnswer;
@@ -27,7 +28,17 @@ public class GameController : Singleton<GameController>
 
     private void RemoveTries()
     {
-        uiController.DisableTryBar(tries);
-        tries -= 1;       
+        if (tries > 0)
+        {
+            uiController.DisableTryBar(tries);
+            tries -= 1;
+        }
+        else
+            GameOver();
+    }
+
+    private void GameOver()
+    {
+
     }
 }
