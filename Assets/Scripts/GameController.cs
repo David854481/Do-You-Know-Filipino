@@ -31,8 +31,8 @@ public class GameController : Singleton<GameController>
     {
         if (tries > 0)
         {
-            uiController.DisableTryBar(tries);
             tries -= 1;
+            uiController.DisableTryBar(tries);
         }
         else
             GameOver();
