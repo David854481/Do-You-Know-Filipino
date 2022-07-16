@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class GameController : Singleton<GameController>
 {
-    private UIController uiController;
-
     private int tries = 3;
     private int score;
 
-    public UIController UIController { set { uiController = value;  } }
+    public UIController UIController { get; set; }
     public void CheckPlayerAnswer(bool playerAnswer, bool itemAnswer)
     {
         var isPlayerCorrect = playerAnswer && itemAnswer;
@@ -18,13 +16,13 @@ public class GameController : Singleton<GameController>
         else
             RemoveTries();
 
-        uiController.EnableAnswerReveal(isPlayerCorrect);
+        UIController.EnableAnswerReveal(isPlayerCorrect);
     }
 
     private void AddScore()
     {
         score += 1;
-        uiController.UpdateScoreUI(score);
+        UIController.UpdateScoreUI(score);
     }
 
     private void RemoveTries()
@@ -32,7 +30,7 @@ public class GameController : Singleton<GameController>
         if (tries > 0)
         {
             tries -= 1;
-            uiController.DisableTryBar(tries);
+            UIController.DisableTryBar(tries);
 
             if (tries <= 0)
                 GameOver();
