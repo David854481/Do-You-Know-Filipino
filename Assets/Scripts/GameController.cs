@@ -24,6 +24,7 @@ public class GameController : Singleton<GameController>
     private void AddScore()
     {
         score += 1;
+        uiController.UpdateScoreUI(score);
     }
 
     private void RemoveTries()
