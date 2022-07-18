@@ -7,7 +7,7 @@ public class GameController : Singleton<GameController>
     private int tries = 3;
 
     public GameplayUI GameplayUI { get; set; }
-    public float Score { get; set; }
+    public float Score { get; private set; }
     public int Tries { get { return tries;  } }
     public void CheckPlayerAnswer(bool playerAnswer, bool itemAnswer)
     {
