@@ -38,13 +38,13 @@ public class GameplayUI : MonoBehaviour
     private void Start()
     {
         GameController.Instance.GameplayUI = this;
+        GameController.Instance.CheckRemainingTries();
+
         UpdateScoreUI(GameController.Instance.Score);
 
         //i being the initial number of attempts provided by the game minus the array index
         for (int i = 2; i > GameController.Instance.Tries - 1; i--)
-            DisableTryBar(i);
-
-        GameController.Instance.CheckRemainingTries();
+            DisableTryBar(i);       
     }
 
     private void SetAnswerReveal(bool answer)

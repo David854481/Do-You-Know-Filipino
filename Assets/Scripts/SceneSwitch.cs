@@ -17,6 +17,8 @@ public class SceneSwitch : MonoBehaviour
                 //Switches to the Results screen
                 SceneManager.LoadScene("CategoryMenu");
                 AudioManager.Instance.Play("ButtonPressSfx");
+                AudioManager.Instance.Stop("GameplayBGM");
+                GameController.Instance.ResetGame();
                 break;
             case 2: //To DoYouKnowFilipino Scene
                 //Sets category information for main game
@@ -24,12 +26,14 @@ public class SceneSwitch : MonoBehaviour
                 //Switches to the MainGame screen
                 SceneManager.LoadScene("Do You Know Filipino");
                 AudioManager.Instance.Play("ButtonPressSfx");
+                AudioManager.Instance.Play("GameplayBGM");
                 break;
             case 3: //To Results Screen
                 //Set the score to the playerpref or database something that holds the scores
 
                 //Switches to the Results screen
                 SceneManager.LoadScene("Results");
+                AudioManager.Instance.Stop("GameplayBGM");
                 break;
         }
     }

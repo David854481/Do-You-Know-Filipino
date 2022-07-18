@@ -22,12 +22,14 @@ public class GameController : Singleton<GameController>
 
     public void CheckRemainingTries()
     {
-        if (tries > 0)
-        {
-            AudioManager.Instance.Play("GameplayBGM");
-            return;
-        }
+        if (tries > 0) return;
         else GameOver();
+    }
+
+    public void ResetGame()
+    {
+        Score = 0;
+        tries = 3;
     }
 
     private void AddScore()
@@ -50,7 +52,6 @@ public class GameController : Singleton<GameController>
         //should check first if the current score beat the highscore
 
         //reset the values for the next game
-        Score = 0;
-        tries = 3;
+        ResetGame();
     }
 }
