@@ -67,6 +67,20 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
         if (transform.position.x > screenUpperRightCorner.x || transform.position.x < screenLowerLeftCorner.x) //Check if image is past screen borders
         {
             //check answer and do some logic to add score or remove life
+            if (transform.position.x > screenUpperRightCorner.x)
+            {
+                Debug.Log("right");
+            }
+
+            else if (transform.position.x < screenUpperRightCorner.x)
+            {
+                Debug.Log("left");
+            }
         }
+    }
+
+    private void Update()
+    {
+        CheckImagePosition();
     }
 }
