@@ -11,9 +11,12 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     private Vector3 panelLocation;
     private Vector3 initialPosition;
 
+    private bool didPlayerAnswer = false;
+    public bool ImageItemAnswer { get; set; }
     private void Awake()
     {
         //get random img related to category
+        ImageItemAnswer = false; //for testing only
     }
 
     private void Start()
@@ -40,6 +43,9 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
                 newLocation += new Vector3(Screen.width, 0, 0);
             StartCoroutine(SmoothMove(transform.position, newLocation, easing));
             panelLocation = newLocation;
+
+            AudioManager.Instance.Play("SwipeImageSfx");
+            didPlayerAnswer = true;
         }
         else
             transform.position = new Vector3(initialPosition.x, initialPosition.y, initialPosition.z);
@@ -69,18 +75,23 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
             //check answer and do some logic to add score or remove life
             if (transform.position.x > screenUpperRightCorner.x)
             {
-                Debug.Log("right");
+                //Debug.Log("right");
+                GameController.Instance.CheckPlayerAnswer(true, ImageItemAnswer);
+                didPlayerAnswer = false;
             }
 
             else if (transform.position.x < screenUpperRightCorner.x)
             {
-                Debug.Log("left");
+                //Debug.Log("left");
+                GameController.Instance.CheckPlayerAnswer(false, ImageItemAnswer);
+                didPlayerAnswer = false;
             }
         }
     }
 
     private void Update()
     {
-        CheckImagePosition();
+        if(didPlayerAnswer)
+            CheckImagePosition();
     }
 }

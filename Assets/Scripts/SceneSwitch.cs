@@ -16,12 +16,14 @@ public class SceneSwitch : MonoBehaviour
             case 1: //To CategoryMenu Scene
                 //Switches to the Results screen
                 SceneManager.LoadScene("CategoryMenu");
+                AudioManager.Instance.Play("ButtonPressSfx");
                 break;
             case 2: //To DoYouKnowFilipino Scene
                 //Sets category information for main game
                 CategoryStatic.CategoryInformation = "test"; //change test to a dynamic variable
                 //Switches to the MainGame screen
                 SceneManager.LoadScene("Do You Know Filipino");
+                AudioManager.Instance.Play("ButtonPressSfx");
                 break;
             case 3: //To Results Screen
                 //Set the score to the playerpref or database something that holds the scores

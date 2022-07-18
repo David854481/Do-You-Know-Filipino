@@ -5,24 +5,35 @@ using UnityEngine;
 public class GameController : Singleton<GameController>
 {
     private int tries = 3;
-    private int score;
 
-    public UIController UIController { get; set; }
+    public GameplayUI GameplayUI { get; set; }
+    public float Score { get; set; }
+    public int Tries { get { return tries;  } }
     public void CheckPlayerAnswer(bool playerAnswer, bool itemAnswer)
     {
-        var isPlayerCorrect = playerAnswer && itemAnswer;
+        var isPlayerCorrect = playerAnswer == itemAnswer;
         if (isPlayerCorrect)
             AddScore();
         else
             RemoveTries();
 
-        UIController.EnableAnswerReveal(isPlayerCorrect);
+        GameplayUI.ShowAnswerReveal(isPlayerCorrect);
+    }
+
+    public void CheckRemainingTries()
+    {
+        if (tries > 0)
+        {
+            AudioManager.Instance.Play("GameplayBGM");
+            return;
+        }
+        else GameOver();
     }
 
     private void AddScore()
     {
-        score += 1;
-        UIController.UpdateScoreUI(score);
+        Score += 1;
+        GameplayUI.UpdateScoreUI(Score);
     }
 
     private void RemoveTries()
@@ -30,15 +41,16 @@ public class GameController : Singleton<GameController>
         if (tries > 0)
         {
             tries -= 1;
-            UIController.DisableTryBar(tries);
-
-            if (tries <= 0)
-                GameOver();
+            GameplayUI.DisableTryBar(tries);
         }
     }
 
     private void GameOver()
     {
+        //should check first if the current score beat the highscore
 
+        //reset the values for the next game
+        Score = 0;
+        tries = 3;
     }
 }
