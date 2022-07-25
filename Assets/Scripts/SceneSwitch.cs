@@ -22,7 +22,9 @@ public class SceneSwitch : MonoBehaviour
                 break;
             case 2: //To DoYouKnowFilipino Scene
                 //Sets category information for main game
-                CategoryStatic.CategoryInformation = "test"; //change test to a dynamic variable
+                PlayerPrefs.SetString("currentCategory", GameController.Instance.currentCategory);
+                PlayerPrefs.Save();
+                CategoryStatic.CategoryInformation = PlayerPrefs.GetString("currentCategory"); //change test to a dynamic variable
                 //Switches to the MainGame screen
                 SceneManager.LoadScene("Do You Know Filipino");
                 AudioManager.Instance.Play("ButtonPressSfx");
@@ -36,5 +38,10 @@ public class SceneSwitch : MonoBehaviour
                 AudioManager.Instance.Stop("GameplayBGM");
                 break;
         }
+    }
+
+    public void setCategoryValue(string category)
+    {
+        GameController.Instance.currentCategory = category;
     }
 }

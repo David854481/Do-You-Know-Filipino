@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Hue
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 70212feb5e3ae9e4a997eb55dd43c101, type: 3}
+  itemName: Hue
+  itemCategory: 
+  itemTrivia: 'Hue is a historic town known for being an imperial enclosure for 19th
+    century Nguyen emperors of Vietnam. It is located near the gorgeous banks of
+    the perfume river and sprawls for 2.5 kilometers. '
+  isFilipino: 0

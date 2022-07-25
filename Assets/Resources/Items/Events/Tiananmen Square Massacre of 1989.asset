@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Tiananmen Square Massacre of 1989
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: fa26ff667839aff49a311723cf8280b0, type: 3}
+  itemName: Tiananmen Square Massacre of 1989
+  itemCategory: 
+  itemTrivia: "The June 4th incident in China wherein students and student-leaders
+    paraded in Tiananmen Square to protest, and the People\u2019s Liberation Army
+    of China openly fired on the students. "
+  isFilipino: 0

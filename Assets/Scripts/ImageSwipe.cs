@@ -16,7 +16,7 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     private void Awake()
     {
         //get random img related to category
-        ImageItemAnswer = false; //for testing only
+        //ImageItemAnswer = false; //for testing only
     }
 
     private void Start()

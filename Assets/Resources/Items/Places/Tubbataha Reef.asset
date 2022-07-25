@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Tubbataha Reef
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 19e30bbb5f6160c4682fac09cde60db0, type: 3}
+  itemName: 'Tubbataha Reef '
+  itemCategory: 
+  itemTrivia: "Tubbataha Reef is one of the popular diving spots in the Philippines
+    and some might say the world. It is a center of marine biodiversity and a haven
+    for divers and marine conservationists. There are many aquatic life and is a
+    UNESCO Heritage Site and was nominated as a \u201CNew Seven Wonders of the Natural
+    World\u201D."
+  isFilipino: 1

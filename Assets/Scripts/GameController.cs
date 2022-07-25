@@ -9,6 +9,8 @@ public class GameController : Singleton<GameController>
     public GameplayUI GameplayUI { get; set; }
     public int Score { get; private set; }
     public int Tries { get { return tries;  } }
+    private List<ItemSO> allItems = new List<ItemSO>();
+    public string currentCategory { get; set;}
     public void CheckPlayerAnswer(bool playerAnswer, bool itemAnswer)
     {
         var isPlayerCorrect = playerAnswer == itemAnswer;
@@ -36,6 +38,10 @@ public class GameController : Singleton<GameController>
     {
         Score += 1;
         GameplayUI.UpdateScoreUI(Score);
+        PlayerPrefs.SetInt("currentScore", Score);
+        PlayerPrefs.Save();
+
+        Debug.Log("Score: " + Score);
     }
 
     private void RemoveTries()
@@ -46,12 +52,42 @@ public class GameController : Singleton<GameController>
             GameplayUI.DisableTryBar(tries);
         }
     }
-
+    
     private void GameOver()
     {
-        //should check first if the current score beat the highscore
+        //Get category and check whether current score is higher than category high score
+        switch (PlayerPrefs.GetString("currentCategory"))
+        {
+            case "food":
+                if (Score > PlayerPrefs.GetInt("highScoreFood"))
+                    PlayerPrefs.SetInt("highScoreFood", Score);
+                break;
+            case "literature":
+                if (Score > PlayerPrefs.GetInt("highScoreLiterature"))
+                    PlayerPrefs.SetInt("highScoreLiterature", Score);
+                break;
+            case "events":
+                if (Score > PlayerPrefs.GetInt("highScoreEvents"))
+                    PlayerPrefs.SetInt("highScoreEvents", Score);
+                break;
+            case "places":
+                if (Score > PlayerPrefs.GetInt("highScorePlaces"))
+                    PlayerPrefs.SetInt("highScorePlaces", Score);
+                break;
+            case "animals":
+                if (Score > PlayerPrefs.GetInt("highScoreAnimals"))
+                    PlayerPrefs.SetInt("highScoreAnimals", Score);
+                break;
+        }
+
+        //Saves score for Results UI
+        PlayerPrefs.SetString("currentCategory", PlayerPrefs.GetString("currentCategory"));
+        PlayerPrefs.Save();
 
         //reset the values for the next game
         ResetGame();
+
+        //ignore how i did this my brain turned off
+        GameplayUI.gameOverTransition();
     }
 }

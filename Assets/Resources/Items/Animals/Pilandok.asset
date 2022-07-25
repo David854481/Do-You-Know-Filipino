@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Pilandok
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 0ced7605e7f7f994b83cb380a290b0a2, type: 3}
+  itemName: Pilandok
+  itemCategory: 
+  itemTrivia: 'Locally known as Pilandok and also called mouse-deers, are endemic
+    small nocturnal ruminants in the islands of Balabac southwest of Palawan in the
+    Philippines. They have horizontal pupils unlike other mouse-deers. '
+  isFilipino: 1

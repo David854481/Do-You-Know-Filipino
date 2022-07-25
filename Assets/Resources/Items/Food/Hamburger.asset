@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Hamburger
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: edc07b46d0275f84c92db29e4f8503bf, type: 3}
+  itemName: hamburger
+  itemCategory: 0
+  itemTrivia: 'A sandwich usually made with a beef patty in the middle of two soft
+    buns, alongside any number of fixings. It is unknown whether it originated in
+    Germany or the United States.  '
+  isFilipino: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Landing at Leyte
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 36ee8b4c40e29194693eee5899645a47, type: 3}
+  itemName: 'Landing at Leyte '
+  itemCategory: 
+  itemTrivia: "With General MacArthur uttering the famous line, \u201CI have returned!\u201D
+    The Battle of Leyte marked the beginning of the beginning of the full-scale liberation
+    of the Philippines from Japanese rule. This event culminated in the absolute
+    freedom of the country led by American General Douglas MacArthur, who operated
+    the Pacific Theatre of the Second World War. "
+  isFilipino: 1

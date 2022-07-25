@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Nochebuena
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 2b88f66b5fe3e5646813157ecbed0884, type: 3}
+  itemName: Nochebuena
+  itemCategory: 
+  itemTrivia: "The most beloved of all events of every Filipino actually traces its
+    roots to the traditions of Spanish culture. Translated literally as \u201CGood
+    Night,\u201D this event occurs during Christmas Eve where families gather and
+    have a meal together in anticipation and celebration of the birth of Jesus Christ.
+    There is a usual host of multiple course meals, but in the Philippines, one would
+    normally have Lechon as the centerpiece. "
+  isFilipino: 0

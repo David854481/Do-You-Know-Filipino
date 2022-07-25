@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Machu Picchu
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: a7be45cbbc81a3b4ea4ea7b80044a1b1, type: 3}
+  itemName: Machu Picchu
+  itemCategory: 
+  itemTrivia: "Machu Picchu dubbed the \u201CLost City of the Incas' ' is a ruin
+    of a 15th century Incan Tribe Citadel now a popular tourist spot to hike. It
+    is located in the Eastern Cordillera of southern Peru on a mountain ridge."
+  isFilipino: 0

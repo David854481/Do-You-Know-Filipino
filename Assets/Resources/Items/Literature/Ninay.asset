@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea27defe5395e9b4aa268006271b6593, type: 3}
+  m_Name: Ninay
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 21300000, guid: 77de8a36804068e4090696b97a2d1a38, type: 3}
+  itemName: ninay
+  itemCategory: 0
+  itemTrivia: A Filipino novel written by Pedro Paterno in the Spanish language.
+    This novel is about a woman named Ninay and her grievances but it is mostly known
+    for its showing of the unique culture of the Philippines and revered to be the
+    first Filipino novel published by a native Filipino.
+  isFilipino: 1
