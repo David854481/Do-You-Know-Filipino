@@ -10,6 +10,7 @@ public class GameplayUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreUI;
     [SerializeField] private Image[] tryBar;
     [SerializeField] private GameObject imageCategoryItem;
+    [SerializeField] private TextMeshProUGUI categoryText;
 
     [Header("Answer Reveal UI")]
     [SerializeField] private GameObject answerRevealOverlay;
@@ -24,6 +25,7 @@ public class GameplayUI : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private Image triviaImage;
     [SerializeField] private TextMeshProUGUI triviaText;
+    [SerializeField] private TextMeshProUGUI triviaCategoryText;
     [SerializeField] private ImageSwipe imageSwipe;
 
     public SceneSwitch sceneSwitch;
@@ -65,6 +67,9 @@ public class GameplayUI : MonoBehaviour
         //i being the initial number of attempts provided by the game minus the array index
         for (int i = 2; i > GameController.Instance.Tries - 1; i--)
             DisableTryBar(i);
+
+        categoryText.text = GameController.Instance.currentCategory;
+        triviaCategoryText.text = GameController.Instance.currentCategory.ToUpper();
     }
 
     private void SetAnswerReveal(bool answer)

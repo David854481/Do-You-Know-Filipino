@@ -2139,7 +2139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1217957864
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4351,8 +4351,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1867844999}
   m_HandleRect: {fileID: 1867844998}
   m_Direction: 2
-  m_Value: 1.0000001
-  m_Size: 0.081109256
+  m_Value: 1
+  m_Size: 0.08110924
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4532,6 +4532,7 @@ MonoBehaviour:
   - {fileID: 1980902987}
   - {fileID: 276120873}
   imageCategoryItem: {fileID: 0}
+  categoryText: {fileID: 1856976235}
   answerRevealOverlay: {fileID: 1225080326}
   answerRevealText: {fileID: 1566765266}
   answerRevealImage: {fileID: 486810247}
@@ -4540,6 +4541,7 @@ MonoBehaviour:
   itemImage: {fileID: 843743084}
   triviaImage: {fileID: 250929726}
   triviaText: {fileID: 2027043915}
+  triviaCategoryText: {fileID: 1286356034}
   imageSwipe: {fileID: 2031676200}
   sceneSwitch: {fileID: 1347100934}
   menuManager: {fileID: 1347100933}

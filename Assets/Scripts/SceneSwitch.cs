@@ -35,6 +35,7 @@ public class SceneSwitch : MonoBehaviour
 
                 //Switches to the Results screen
                 SceneManager.LoadScene("Results");
+                AudioManager.Instance.Play("GameOverSfx");
                 AudioManager.Instance.Stop("GameplayBGM");
                 break;
         }
