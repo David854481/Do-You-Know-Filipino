@@ -62,7 +62,7 @@ public class GameplayUI : MonoBehaviour
         
         pickRandomItem();
 
-        if (PlayerPrefs.GetInt("isNewGame") == 0)
+        if (PlayerPrefs.GetInt("isNewGame", 0) == 0)
         {
             PlayerPrefs.SetInt("isNewGame", 1);
             PlayerPrefs.Save();
