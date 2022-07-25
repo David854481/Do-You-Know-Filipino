@@ -16,7 +16,7 @@ public class CategoryUI : MonoBehaviour
     void Start()
     {
         UpdateHighScoreUI();
-        if(PlayerPrefs.GetInt("isNewGame") != 1)
+        if(PlayerPrefs.GetInt("isNewGame", 0) != 1)
             PlayerPrefs.SetInt("isNewGame", 0);
         PlayerPrefs.Save();
     }

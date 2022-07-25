@@ -13,11 +13,6 @@ public class ImageSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
 
     private bool didPlayerAnswer = false;
     public bool ImageItemAnswer { get; set; }
-    private void Awake()
-    {
-        //get random img related to category
-        //ImageItemAnswer = false; //for testing only
-    }
 
     private void Start()
     {

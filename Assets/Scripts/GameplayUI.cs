@@ -48,10 +48,15 @@ public class GameplayUI : MonoBehaviour
         PlayAnswerRevealAudio(answer);
         answerRevealOverlay.SetActive(true);
     }
+
+    private void Awake()
+    {
+        GameController.Instance.CheckRemainingTries();
+    }
+
     private void Start()
     {
-        GameController.Instance.GameplayUI = this;
-        GameController.Instance.CheckRemainingTries();
+        GameController.Instance.GameplayUI = this;        
 
         UpdateScoreUI(GameController.Instance.Score);
         
