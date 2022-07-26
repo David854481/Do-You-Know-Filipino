@@ -123,7 +123,7 @@ public class GameplayUI : MonoBehaviour
                 break;
             case "places":
                 allItems.Clear();
-                allItems.AddRange(Resources.LoadAll<ItemSO>("Items/Events/"));
+                allItems.AddRange(Resources.LoadAll<ItemSO>("Items/Places/"));
                 break;
             case "animals":
                 allItems.Clear();
