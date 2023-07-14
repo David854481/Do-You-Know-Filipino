@@ -3,7 +3,8 @@
 <br/><br/><br/>
 <b>Credits:</b><br/>
 Trivia System, Front-end Development, Highscore System, and Scene Transitions by me<br/>
-Gameplay Implementation, and Graphics & Audio Integration by https://github.com/France30
+Gameplay Implementation, and Graphics & Audio Integration by https://github.com/France30<br/>
+Minor Assets by https://www.linkedin.com/in/lance-rimando-90143b175/
 
 ## Gameplay
 https://github.com/France30/Do-You-Know-Filipino/assets/53886711/c8f9b32e-79fd-4791-8fd3-8f601a5b0fa2
