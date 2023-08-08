@@ -4,7 +4,7 @@
 <b>Credits:</b>
 <br/>Trivia System, Front-end Development, Highscore System, and Scene Transitions by me
 <br/>Gameplay Implementation, and Graphics & Audio Integration by https://github.com/France30
-<br/>Minor Assets by https://www.linkedin.com/in/lance-rimando-90143b175/
+<br/>Minor Assets by https://www.linkedin.com/in/lance-rimando-90143b175/, and https://www.linkedin.com/in/gpbatallones/
 <br/>UI Design & Assets, and Minor Assets by https://www.linkedin.com/in/renzo-villaflor-40782b171/
 
 ## Gameplay
